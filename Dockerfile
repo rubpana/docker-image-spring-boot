@@ -3,6 +3,6 @@ LABEL maintainer="Rubén Panadero"
 VOLUME /data
 EXPOSE 8080
 
-ENV SPRING_BOOT_APP_JAR target/*.jar
+ENV SPRING_BOOT_APP_JAR /data/target/*.jar
 
-CMD java -jar /data/target/*.jar
+CMD java -jar $SPRING_BOOT_APP_JAR
